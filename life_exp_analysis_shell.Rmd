@@ -36,6 +36,11 @@ gapminder_unfiltered %>%
 
 # head(sumdat)
 
-
+ggplot(sumdat, mapping = aes(x = year, y = lifeExp)) +
+  geom_point(aes(color = country)) + 
+  geom_smooth(method = lm) +
+  labs(x = "Year", y = "Maximum Life Expectancy",
+       color = "Country") +
+  theme_minimal()
 ```
 
